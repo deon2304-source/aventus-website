@@ -272,7 +272,7 @@ footer .brand-text em{color:var(--cyan2)}
 .photo-hero .btn-primary:hover{background:var(--cyan2)}
 .photo-hero .btn-ghost{color:#fff}
 .photo-hero .hero-eyebrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff}
-.concept-tag{position:absolute;right:14px;bottom:12px;background:rgba(20,30,38,.72);color:#fff;font-size:11px;font-weight:600;letter-spacing:.4px;padding:4px 10px;border-radius:999px;z-index:2}
+.concept-tag{white-space:nowrap;position:absolute;right:14px;bottom:12px;background:rgba(20,30,38,.72);color:#fff;font-size:11px;font-weight:600;letter-spacing:.4px;padding:4px 10px;border-radius:999px;z-index:2}
 .photo-hero .concept-tag{right:5%;bottom:24px}
 
 .fig{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#dfe6e9}
@@ -324,8 +324,9 @@ footer .brand-text em{color:var(--cyan2)}
 .app-row{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:56px 0;border-bottom:1px solid var(--line)}
 .app-row:last-child{border-bottom:none}
 .app-row.flip .app-text{order:2}
-.app-imgs{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;height:340px}
-.app-imgs .fig{height:100%}
+.app-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center}
+.app-imgs .fig{height:auto;width:fit-content;max-width:100%;justify-self:center;background:none}
+.app-imgs .fig img{width:auto;max-width:100%;height:auto;max-height:340px;object-fit:contain}
 .app-tag{font-size:13px;font-weight:800;color:var(--cyan-dark);letter-spacing:1.5px;text-transform:uppercase}
 .app-title{font-size:30px;font-weight:900;color:var(--navy);letter-spacing:-1px;margin:6px 0 4px}
 .app-sub{font-size:15px;font-weight:700;color:#a8701c;margin-bottom:14px}
@@ -372,7 +373,6 @@ footer .brand-text em{color:var(--cyan2)}
   .num-grid,.app-grid{grid-template-columns:1fr 1fr}
   .size-grid,.ways-grid,.app-row,.status-panel{grid-template-columns:1fr}
   .app-row.flip .app-text{order:0}
-  .app-imgs{height:260px}
 }
-@media(max-width:560px){.num-grid,.app-grid{grid-template-columns:1fr}.app-imgs{grid-template-columns:1fr;height:auto}.app-imgs .fig{height:220px}}
+@media(max-width:560px){.num-grid,.app-grid{grid-template-columns:1fr}.app-imgs{grid-template-columns:1fr}}
 .hero.simple{padding-top:190px}
